@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PMUModelStoreContainer" CdmEntityContainer="PMUEntities">
+    <EntitySetMapping Name="Feeder">
+      <EntityTypeMapping TypeName="PMUModel.Feeder">
+        <MappingFragment StoreEntitySet="Feeder">
+          <ScalarProperty Name="feederID" ColumnName="feederID" />
+          <ScalarProperty Name="Fname" ColumnName="Fname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Phase1">
+      <EntityTypeMapping TypeName="PMUModel.Phase1">
+        <MappingFragment StoreEntitySet="Phase1">
+          <ScalarProperty Name="feederid" ColumnName="feederid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="busID" ColumnName="busID" />
+          <ScalarProperty Name="dataTime" ColumnName="dataTime" />
+          <ScalarProperty Name="VhM" ColumnName="VhM" />
+          <ScalarProperty Name="VhA" ColumnName="VhA" />
+          <ScalarProperty Name="VlM" ColumnName="VlM" />
+          <ScalarProperty Name="VlA" ColumnName="VlA" />
+          <ScalarProperty Name="IhM" ColumnName="IhM" />
+          <ScalarProperty Name="IhA" ColumnName="IhA" />
+          <ScalarProperty Name="IlM" ColumnName="IlM" />
+          <ScalarProperty Name="IlA" ColumnName="IlA" />
+          <ScalarProperty Name="ph" ColumnName="ph" />
+          <ScalarProperty Name="Qh" ColumnName="Qh" />
+          <ScalarProperty Name="Pl" ColumnName="Pl" />
+          <ScalarProperty Name="Ql" ColumnName="Ql" />
+          <ScalarProperty Name="Plosscable" ColumnName="Plosscable" />
+          <ScalarProperty Name="Qlosscable" ColumnName="Qlosscable" />
+          <ScalarProperty Name="Plosstr" ColumnName="Plosstr" />
+          <ScalarProperty Name="Qlosstr" ColumnName="Qlosstr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Phase2">
+      <EntityTypeMapping TypeName="PMUModel.Phase2">
+        <MappingFragment StoreEntitySet="Phase2">
+          <ScalarProperty Name="feederid" ColumnName="feederid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="busID" ColumnName="busID" />
+          <ScalarProperty Name="dataTime" ColumnName="dataTime" />
+          <ScalarProperty Name="VhM" ColumnName="VhM" />
+          <ScalarProperty Name="VhA" ColumnName="VhA" />
+          <ScalarProperty Name="VlM" ColumnName="VlM" />
+          <ScalarProperty Name="VlA" ColumnName="VlA" />
+          <ScalarProperty Name="IhM" ColumnName="IhM" />
+          <ScalarProperty Name="IhA" ColumnName="IhA" />
+          <ScalarProperty Name="IlM" ColumnName="IlM" />
+          <ScalarProperty Name="IlA" ColumnName="IlA" />
+          <ScalarProperty Name="ph" ColumnName="ph" />
+          <ScalarProperty Name="Qh" ColumnName="Qh" />
+          <ScalarProperty Name="Pl" ColumnName="Pl" />
+          <ScalarProperty Name="Ql" ColumnName="Ql" />
+          <ScalarProperty Name="Plosscable" ColumnName="Plosscable" />
+          <ScalarProperty Name="Qlosscable" ColumnName="Qlosscable" />
+          <ScalarProperty Name="Plosstr" ColumnName="Plosstr" />
+          <ScalarProperty Name="Qlosstr" ColumnName="Qlosstr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Phase3">
+      <EntityTypeMapping TypeName="PMUModel.Phase3">
+        <MappingFragment StoreEntitySet="Phase3">
+          <ScalarProperty Name="feederid" ColumnName="feederid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="busID" ColumnName="busID" />
+          <ScalarProperty Name="dataTime" ColumnName="dataTime" />
+          <ScalarProperty Name="VhM" ColumnName="VhM" />
+          <ScalarProperty Name="VhA" ColumnName="VhA" />
+          <ScalarProperty Name="VlM" ColumnName="VlM" />
+          <ScalarProperty Name="VlA" ColumnName="VlA" />
+          <ScalarProperty Name="IhM" ColumnName="IhM" />
+          <ScalarProperty Name="IhA" ColumnName="IhA" />
+          <ScalarProperty Name="IlM" ColumnName="IlM" />
+          <ScalarProperty Name="IlA" ColumnName="IlA" />
+          <ScalarProperty Name="ph" ColumnName="ph" />
+          <ScalarProperty Name="Qh" ColumnName="Qh" />
+          <ScalarProperty Name="Pl" ColumnName="Pl" />
+          <ScalarProperty Name="Ql" ColumnName="Ql" />
+          <ScalarProperty Name="Plosscable" ColumnName="Plosscable" />
+          <ScalarProperty Name="Qlosscable" ColumnName="Qlosscable" />
+          <ScalarProperty Name="Plosstr" ColumnName="Plosstr" />
+          <ScalarProperty Name="Qlosstr" ColumnName="Qlosstr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="buses1Set">
+      <EntityTypeMapping TypeName="PMUModel.buses1">
+        <MappingFragment StoreEntitySet="buses">
+          <ScalarProperty Name="secondaryconnection" ColumnName="secondaryconnection" />
+          <ScalarProperty Name="primaryconnection" ColumnName="primaryconnection" />
+          <ScalarProperty Name="connectiongroup" ColumnName="connectiongroup" />
+          <ScalarProperty Name="secondaryvoltage" ColumnName="secondaryvoltage" />
+          <ScalarProperty Name="primaryvoltage" ColumnName="primaryvoltage" />
+          <ScalarProperty Name="cooling" ColumnName="cooling" />
+          <ScalarProperty Name="VArate" ColumnName="VArate" />
+          <ScalarProperty Name="Ztr" ColumnName="Ztr" />
+          <ScalarProperty Name="length" ColumnName="length" />
+          <ScalarProperty Name="Ym" ColumnName="Ym" />
+          <ScalarProperty Name="Ys" ColumnName="Ys" />
+          <ScalarProperty Name="Zm" ColumnName="Zm" />
+          <ScalarProperty Name="Zs" ColumnName="Zs" />
+          <ScalarProperty Name="insulation" ColumnName="insulation" />
+          <ScalarProperty Name="frequency" ColumnName="frequency" />
+          <ScalarProperty Name="voltage" ColumnName="voltage" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="feederId" ColumnName="feederId" />
+          <ScalarProperty Name="busID" ColumnName="busID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

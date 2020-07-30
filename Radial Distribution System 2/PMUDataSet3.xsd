@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PMUDataSet3" targetNamespace="http://tempuri.org/PMUDataSet3.xsd" xmlns:mstns="http://tempuri.org/PMUDataSet3.xsd" xmlns="http://tempuri.org/PMUDataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PMUConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PMUConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Radial_Distribution_System_2.Properties.Settings.GlobalReference.Default.PMUConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="busesTableAdapter" GeneratorDataComponentClassName="busesTableAdapter" Name="buses" UserDataComponentName="busesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PMUConnectionString (Settings)" DbObjectName="PMU.dbo.buses" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT type, voltage, frequency, length, Zs, Zm, Ys, [mutual Admittance], insulation, VArating, Vp, Vs, [Primary connection], [secondary connection], cooling, [connection group], impedence FROM dbo.buses</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="type" DataSetColumn="type" />
+              <Mapping SourceColumn="voltage" DataSetColumn="voltage" />
+              <Mapping SourceColumn="frequency" DataSetColumn="frequency" />
+              <Mapping SourceColumn="length" DataSetColumn="length" />
+              <Mapping SourceColumn="Zs" DataSetColumn="Zs" />
+              <Mapping SourceColumn="Zm" DataSetColumn="Zm" />
+              <Mapping SourceColumn="Ys" DataSetColumn="Ys" />
+              <Mapping SourceColumn="mutual Admittance" DataSetColumn="mutual Admittance" />
+              <Mapping SourceColumn="insulation" DataSetColumn="insulation" />
+              <Mapping SourceColumn="VArating" DataSetColumn="VArating" />
+              <Mapping SourceColumn="Vp" DataSetColumn="Vp" />
+              <Mapping SourceColumn="Vs" DataSetColumn="Vs" />
+              <Mapping SourceColumn="Primary connection" DataSetColumn="Primary connection" />
+              <Mapping SourceColumn="secondary connection" DataSetColumn="secondary connection" />
+              <Mapping SourceColumn="cooling" DataSetColumn="cooling" />
+              <Mapping SourceColumn="connection group" DataSetColumn="connection group" />
+              <Mapping SourceColumn="impedence" DataSetColumn="impedence" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PMUDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PMUDataSet3" msprop:Generator_UserDSName="PMUDataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="buses" msprop:Generator_TableClassName="busesDataTable" msprop:Generator_TableVarName="tablebuses" msprop:Generator_TablePropName="buses" msprop:Generator_RowDeletingName="busesRowDeleting" msprop:Generator_RowChangingName="busesRowChanging" msprop:Generator_RowEvHandlerName="busesRowChangeEventHandler" msprop:Generator_RowDeletedName="busesRowDeleted" msprop:Generator_UserTableName="buses" msprop:Generator_RowChangedName="busesRowChanged" msprop:Generator_RowEvArgName="busesRowChangeEvent" msprop:Generator_RowClassName="busesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="type" msprop:Generator_ColumnVarNameInTable="columntype" msprop:Generator_ColumnPropNameInRow="type" msprop:Generator_ColumnPropNameInTable="typeColumn" msprop:Generator_UserColumnName="type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="voltage" msprop:Generator_ColumnVarNameInTable="columnvoltage" msprop:Generator_ColumnPropNameInRow="voltage" msprop:Generator_ColumnPropNameInTable="voltageColumn" msprop:Generator_UserColumnName="voltage" type="xs:double" minOccurs="0" />
+              <xs:element name="frequency" msprop:Generator_ColumnVarNameInTable="columnfrequency" msprop:Generator_ColumnPropNameInRow="frequency" msprop:Generator_ColumnPropNameInTable="frequencyColumn" msprop:Generator_UserColumnName="frequency" type="xs:double" minOccurs="0" />
+              <xs:element name="length" msprop:Generator_ColumnVarNameInTable="columnlength" msprop:Generator_ColumnPropNameInRow="length" msprop:Generator_ColumnPropNameInTable="lengthColumn" msprop:Generator_UserColumnName="length" type="xs:double" minOccurs="0" />
+              <xs:element name="Zs" msprop:Generator_ColumnVarNameInTable="columnZs" msprop:Generator_ColumnPropNameInRow="Zs" msprop:Generator_ColumnPropNameInTable="ZsColumn" msprop:Generator_UserColumnName="Zs" type="xs:double" minOccurs="0" />
+              <xs:element name="Zm" msprop:Generator_ColumnVarNameInTable="columnZm" msprop:Generator_ColumnPropNameInRow="Zm" msprop:Generator_ColumnPropNameInTable="ZmColumn" msprop:Generator_UserColumnName="Zm" type="xs:double" minOccurs="0" />
+              <xs:element name="Ys" msprop:Generator_ColumnVarNameInTable="columnYs" msprop:Generator_ColumnPropNameInRow="Ys" msprop:Generator_ColumnPropNameInTable="YsColumn" msprop:Generator_UserColumnName="Ys" type="xs:double" minOccurs="0" />
+              <xs:element name="mutual_x0020_Admittance" msprop:Generator_ColumnVarNameInTable="columnmutual_Admittance" msprop:Generator_ColumnPropNameInRow="mutual_Admittance" msprop:Generator_ColumnPropNameInTable="mutual_AdmittanceColumn" msprop:Generator_UserColumnName="mutual Admittance" type="xs:double" minOccurs="0" />
+              <xs:element name="insulation" msprop:Generator_ColumnVarNameInTable="columninsulation" msprop:Generator_ColumnPropNameInRow="insulation" msprop:Generator_ColumnPropNameInTable="insulationColumn" msprop:Generator_UserColumnName="insulation" type="xs:double" minOccurs="0" />
+              <xs:element name="VArating" msprop:Generator_ColumnVarNameInTable="columnVArating" msprop:Generator_ColumnPropNameInRow="VArating" msprop:Generator_ColumnPropNameInTable="VAratingColumn" msprop:Generator_UserColumnName="VArating" type="xs:double" minOccurs="0" />
+              <xs:element name="Vp" msprop:Generator_ColumnVarNameInTable="columnVp" msprop:Generator_ColumnPropNameInRow="Vp" msprop:Generator_ColumnPropNameInTable="VpColumn" msprop:Generator_UserColumnName="Vp" type="xs:double" minOccurs="0" />
+              <xs:element name="Vs" msprop:Generator_ColumnVarNameInTable="columnVs" msprop:Generator_ColumnPropNameInRow="Vs" msprop:Generator_ColumnPropNameInTable="VsColumn" msprop:Generator_UserColumnName="Vs" type="xs:double" minOccurs="0" />
+              <xs:element name="Primary_x0020_connection" msprop:Generator_ColumnVarNameInTable="columnPrimary_connection" msprop:Generator_ColumnPropNameInRow="Primary_connection" msprop:Generator_ColumnPropNameInTable="Primary_connectionColumn" msprop:Generator_UserColumnName="Primary connection" type="xs:double" minOccurs="0" />
+              <xs:element name="secondary_x0020_connection" msprop:Generator_ColumnVarNameInTable="columnsecondary_connection" msprop:Generator_ColumnPropNameInRow="secondary_connection" msprop:Generator_ColumnPropNameInTable="secondary_connectionColumn" msprop:Generator_UserColumnName="secondary connection" type="xs:double" minOccurs="0" />
+              <xs:element name="cooling" msprop:Generator_ColumnVarNameInTable="columncooling" msprop:Generator_ColumnPropNameInRow="cooling" msprop:Generator_ColumnPropNameInTable="coolingColumn" msprop:Generator_UserColumnName="cooling" type="xs:double" minOccurs="0" />
+              <xs:element name="connection_x0020_group" msprop:Generator_ColumnVarNameInTable="columnconnection_group" msprop:Generator_ColumnPropNameInRow="connection_group" msprop:Generator_ColumnPropNameInTable="connection_groupColumn" msprop:Generator_UserColumnName="connection group" type="xs:double" minOccurs="0" />
+              <xs:element name="impedence" msprop:Generator_ColumnVarNameInTable="columnimpedence" msprop:Generator_ColumnPropNameInRow="impedence" msprop:Generator_ColumnPropNameInTable="impedenceColumn" msprop:Generator_UserColumnName="impedence" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

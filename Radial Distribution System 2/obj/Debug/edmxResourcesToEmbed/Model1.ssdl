@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PMUModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'PMU.dbo.buses' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="buses">
+    <Key>
+      <PropertyRef Name="busID" />
+      <PropertyRef Name="feederId" />
+    </Key>
+    <Property Name="busID" Type="int" Nullable="false" />
+    <Property Name="feederId" Type="int" Nullable="false" />
+    <Property Name="type" Type="nchar" MaxLength="10" />
+    <Property Name="voltage" Type="float" />
+    <Property Name="frequency" Type="float" />
+    <Property Name="insulation" Type="nchar" MaxLength="10" />
+    <Property Name="Zs" Type="nvarchar" MaxLength="50" />
+    <Property Name="Zm" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ys" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ym" Type="nvarchar" MaxLength="50" />
+    <Property Name="length" Type="float" />
+    <Property Name="Ztr" Type="nvarchar" MaxLength="50" />
+    <Property Name="VArate" Type="float" />
+    <Property Name="cooling" Type="nchar" MaxLength="10" />
+    <Property Name="primaryvoltage" Type="float" />
+    <Property Name="secondaryvoltage" Type="float" />
+    <Property Name="connectiongroup" Type="nchar" MaxLength="10" />
+    <Property Name="primaryconnection" Type="nvarchar" MaxLength="50" />
+    <Property Name="secondaryconnection" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Feeder">
+    <Key>
+      <PropertyRef Name="feederID" />
+    </Key>
+    <Property Name="feederID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fname" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Phase1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="busID" Type="int" Nullable="false" />
+    <Property Name="feederid" Type="int" Nullable="false" />
+    <Property Name="dataTime" Type="datetime" Nullable="false" />
+    <Property Name="VhM" Type="float" />
+    <Property Name="VhA" Type="float" />
+    <Property Name="VlM" Type="float" />
+    <Property Name="VlA" Type="float" />
+    <Property Name="IhM" Type="float" />
+    <Property Name="IhA" Type="float" />
+    <Property Name="IlM" Type="float" />
+    <Property Name="IlA" Type="float" />
+    <Property Name="ph" Type="float" />
+    <Property Name="Qh" Type="float" />
+    <Property Name="Pl" Type="float" />
+    <Property Name="Ql" Type="float" />
+    <Property Name="Plosscable" Type="float" />
+    <Property Name="Qlosscable" Type="float" />
+    <Property Name="Plosstr" Type="float" />
+    <Property Name="Qlosstr" Type="float" />
+  </EntityType>
+  <EntityType Name="Phase2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="busID" Type="int" Nullable="false" />
+    <Property Name="feederid" Type="int" Nullable="false" />
+    <Property Name="dataTime" Type="datetime" Nullable="false" />
+    <Property Name="VhM" Type="float" />
+    <Property Name="VhA" Type="float" />
+    <Property Name="VlM" Type="float" />
+    <Property Name="VlA" Type="float" />
+    <Property Name="IhM" Type="float" />
+    <Property Name="IhA" Type="float" />
+    <Property Name="IlM" Type="float" />
+    <Property Name="IlA" Type="float" />
+    <Property Name="ph" Type="float" />
+    <Property Name="Qh" Type="float" />
+    <Property Name="Pl" Type="float" />
+    <Property Name="Ql" Type="float" />
+    <Property Name="Plosscable" Type="float" />
+    <Property Name="Qlosscable" Type="float" />
+    <Property Name="Plosstr" Type="float" />
+    <Property Name="Qlosstr" Type="float" />
+  </EntityType>
+  <EntityType Name="Phase3">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="busID" Type="int" Nullable="false" />
+    <Property Name="feederid" Type="int" Nullable="false" />
+    <Property Name="dataTime" Type="datetime" Nullable="false" />
+    <Property Name="VhM" Type="float" />
+    <Property Name="VhA" Type="float" />
+    <Property Name="VlM" Type="float" />
+    <Property Name="VlA" Type="float" />
+    <Property Name="IhM" Type="float" />
+    <Property Name="IhA" Type="float" />
+    <Property Name="IlM" Type="float" />
+    <Property Name="IlA" Type="float" />
+    <Property Name="ph" Type="float" />
+    <Property Name="Qh" Type="float" />
+    <Property Name="Pl" Type="float" />
+    <Property Name="Ql" Type="float" />
+    <Property Name="Plosscable" Type="float" />
+    <Property Name="Qlosscable" Type="float" />
+    <Property Name="Plosstr" Type="float" />
+    <Property Name="Qlosstr" Type="float" />
+  </EntityType>
+  <EntityContainer Name="PMUModelStoreContainer">
+    <EntitySet Name="Feeder" EntityType="Self.Feeder" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Phase1" EntityType="Self.Phase1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Phase2" EntityType="Self.Phase2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Phase3" EntityType="Self.Phase3" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="buses" EntityType="Self.buses" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [buses].[busID] AS [busID], 
+    [buses].[feederId] AS [feederId], 
+    [buses].[type] AS [type], 
+    [buses].[voltage] AS [voltage], 
+    [buses].[frequency] AS [frequency], 
+    [buses].[insulation] AS [insulation], 
+    [buses].[Zs] AS [Zs], 
+    [buses].[Zm] AS [Zm], 
+    [buses].[Ys] AS [Ys], 
+    [buses].[Ym] AS [Ym], 
+    [buses].[length] AS [length], 
+    [buses].[Ztr] AS [Ztr], 
+    [buses].[VArate] AS [VArate], 
+    [buses].[cooling] AS [cooling], 
+    [buses].[primaryvoltage] AS [primaryvoltage], 
+    [buses].[secondaryvoltage] AS [secondaryvoltage], 
+    [buses].[connectiongroup] AS [connectiongroup], 
+    [buses].[primaryconnection] AS [primaryconnection], 
+    [buses].[secondaryconnection] AS [secondaryconnection]
+    FROM [dbo].[buses] AS [buses]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

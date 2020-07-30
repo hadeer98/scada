@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PMUModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="buses">
+    <Key>
+      <PropertyRef Name="busID" />
+    </Key>
+    <Property Name="busID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="feederId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Feeder" Relationship="Self.FK__buses__feaderId__398D8EEE" FromRole="buses" ToRole="Feeder" />
+    <NavigationProperty Name="buses1" Relationship="Self.FK_buses_buses" FromRole="buses" ToRole="buses1" />
+    <NavigationProperty Name="buses2" Relationship="Self.FK_buses_buses" FromRole="buses1" ToRole="buses" />
+    <NavigationProperty Name="buses11" Relationship="Self.FK_buses_buses1" FromRole="buses" ToRole="buses1" />
+    <NavigationProperty Name="buses3" Relationship="Self.FK_buses_buses1" FromRole="buses1" ToRole="buses" />
+    <Property Name="type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="voltage" Type="Double" />
+    <Property Name="frequency" Type="Double" />
+    <Property Name="length" Type="Double" />
+    <Property Name="Zs" Type="Double" />
+    <Property Name="Zm" Type="Double" />
+    <Property Name="Ys" Type="Double" />
+    <Property Name="mutual_Admittance" Type="Double" />
+    <Property Name="insulation" Type="Double" />
+    <Property Name="VArating" Type="Double" />
+    <Property Name="Vp" Type="Double" />
+    <Property Name="Vs" Type="Double" />
+    <Property Name="Primary_connection" Type="Double" />
+    <Property Name="secondary_connection" Type="Double" />
+    <Property Name="cooling" Type="Double" />
+    <Property Name="connection_group" Type="Double" />
+    <Property Name="impedence" Type="Double" />
+  </EntityType>
+  <EntityType Name="Feeder">
+    <Key>
+      <PropertyRef Name="feederID" />
+    </Key>
+    <Property Name="feederID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="buses" Relationship="Self.FK__buses__feaderId__398D8EEE" FromRole="Feeder" ToRole="buses" />
+  </EntityType>
+  <EntityType Name="Phase1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="busID" Type="Int32" Nullable="false" />
+    <Property Name="dataTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="VhM" Type="Double" />
+    <Property Name="VhA" Type="Double" />
+    <Property Name="VlM" Type="Double" />
+    <Property Name="VlA" Type="Double" />
+    <Property Name="IhM" Type="Double" />
+    <Property Name="IhA" Type="Double" />
+    <Property Name="IlM" Type="Double" />
+    <Property Name="IlA" Type="Double" />
+    <Property Name="ph" Type="Double" />
+    <Property Name="Qh" Type="Double" />
+    <Property Name="Pl" Type="Double" />
+    <Property Name="Ql" Type="Double" />
+    <Property Name="Plosscable" Type="Double" />
+    <Property Name="Qlosscable" Type="Double" />
+    <Property Name="Plosstr" Type="Double" />
+    <Property Name="Qlosstr" Type="Double" />
+    <Property Name="feederid" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Phase2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="busID" Type="Int32" Nullable="false" />
+    <Property Name="dataTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="VhM" Type="Double" />
+    <Property Name="VhA" Type="Double" />
+    <Property Name="VlM" Type="Double" />
+    <Property Name="VlA" Type="Double" />
+    <Property Name="IhM" Type="Double" />
+    <Property Name="IhA" Type="Double" />
+    <Property Name="IlM" Type="Double" />
+    <Property Name="IlA" Type="Double" />
+    <Property Name="ph" Type="Double" />
+    <Property Name="Qh" Type="Double" />
+    <Property Name="Pl" Type="Double" />
+    <Property Name="Ql" Type="Double" />
+    <Property Name="Plosscable" Type="Double" />
+    <Property Name="Qlosscable" Type="Double" />
+    <Property Name="Plosstr" Type="Double" />
+    <Property Name="Qlosstr" Type="Double" />
+    <Property Name="feederid" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Phase3">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="busID" Type="Int32" Nullable="false" />
+    <Property Name="dataTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="VhM" Type="Double" />
+    <Property Name="VhA" Type="Double" />
+    <Property Name="VlM" Type="Double" />
+    <Property Name="VlA" Type="Double" />
+    <Property Name="IhM" Type="Double" />
+    <Property Name="IhA" Type="Double" />
+    <Property Name="IlM" Type="Double" />
+    <Property Name="IlA" Type="Double" />
+    <Property Name="ph" Type="Double" />
+    <Property Name="Qh" Type="Double" />
+    <Property Name="Pl" Type="Double" />
+    <Property Name="Ql" Type="Double" />
+    <Property Name="Plosscable" Type="Double" />
+    <Property Name="Qlosscable" Type="Double" />
+    <Property Name="Plosstr" Type="Double" />
+    <Property Name="Qlosstr" Type="Double" />
+    <Property Name="feederid" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__buses__feaderId__398D8EEE">
+    <End Role="Feeder" Type="Self.Feeder" Multiplicity="1" />
+    <End Role="buses" Type="Self.buses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Feeder">
+        <PropertyRef Name="feederID" />
+      </Principal>
+      <Dependent Role="buses">
+        <PropertyRef Name="feederId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_buses_buses">
+    <End Role="buses" Type="Self.buses" Multiplicity="1" />
+    <End Role="buses1" Type="Self.buses" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="buses">
+        <PropertyRef Name="busID" />
+      </Principal>
+      <Dependent Role="buses1">
+        <PropertyRef Name="busID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_buses_buses1">
+    <End Role="buses" Type="Self.buses" Multiplicity="1" />
+    <End Role="buses1" Type="Self.buses" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="buses">
+        <PropertyRef Name="busID" />
+      </Principal>
+      <Dependent Role="buses1">
+        <PropertyRef Name="busID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PMUEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="buses" EntityType="Self.buses" />
+    <EntitySet Name="Feeder" EntityType="Self.Feeder" />
+    <EntitySet Name="Phase1" EntityType="Self.Phase1" />
+    <EntitySet Name="Phase2" EntityType="Self.Phase2" />
+    <EntitySet Name="Phase3" EntityType="Self.Phase3" />
+    <AssociationSet Name="FK__buses__feaderId__398D8EEE" Association="Self.FK__buses__feaderId__398D8EEE">
+      <End Role="Feeder" EntitySet="Feeder" />
+      <End Role="buses" EntitySet="buses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_buses_buses" Association="Self.FK_buses_buses">
+      <End Role="buses" EntitySet="buses" />
+      <End Role="buses1" EntitySet="buses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_buses_buses1" Association="Self.FK_buses_buses1">
+      <End Role="buses" EntitySet="buses" />
+      <End Role="buses1" EntitySet="buses" />
+    </AssociationSet>
+    <EntitySet Name="cableandtrdata" EntityType="PMUModel.cableandtrdata" />
+    <EntitySet Name="buses1Set" EntityType="PMUModel.buses1" />
+  </EntityContainer>
+  <EntityType Name="cableandtrdata">
+    <Key>
+      <PropertyRef Name="busID" />
+      <PropertyRef Name="feederid" />
+    </Key>
+    <Property Name="busID" Type="Int32" Nullable="false" />
+    <Property Name="feederid" Type="Int32" Nullable="false" />
+    <Property Name="type" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="voltage" Type="Double" />
+    <Property Name="frequency" Type="Double" />
+    <Property Name="insulation" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Zs" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Zm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ys" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ym" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="length" Type="Double" />
+    <Property Name="Ztr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VArate" Type="Double" />
+    <Property Name="cooling" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="primaryvoltage" Type="Double" />
+    <Property Name="secondaryvoltage" Type="Double" />
+    <Property Name="connectiongroup" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="primaryconnection" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="secondaryconnection" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="buses1">
+    <Key>
+      <PropertyRef Name="busID" />
+      <PropertyRef Name="feederId" />
+    </Key>
+    <Property Name="busID" Type="Int32" Nullable="false" />
+    <Property Name="feederId" Type="Int32" Nullable="false" />
+    <Property Name="type" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="voltage" Type="Double" />
+    <Property Name="frequency" Type="Double" />
+    <Property Name="insulation" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Zs" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Zm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ys" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ym" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="length" Type="Double" />
+    <Property Name="Ztr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VArate" Type="Double" />
+    <Property Name="cooling" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="primaryvoltage" Type="Double" />
+    <Property Name="secondaryvoltage" Type="Double" />
+    <Property Name="connectiongroup" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="primaryconnection" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="secondaryconnection" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>
